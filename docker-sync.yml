@@ -1,0 +1,17 @@
+version: '2'
+
+options:
+  compose-dev-file-path: 'docker-compose-dev.yml'
+
+syncs:
+  app-sync-volume:
+    sync_excludes: [
+      '.git*',
+      '.DS_Store',
+      '.data*',
+      'containers*',
+      'docker-*',
+      'Dockerfile'
+    ]
+    src: '.'
+    sync_strategy: 'native_osx'

@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  web:
+    build: ./containers/web
+    ports:
+      - "80:80"
+    links:
+      - "app:localhost"
+
+  app:
+    build: ./
+    env_file: ./containers/.env
+    ports:
+      - "9000:9000"
+    environment:
+      DATABASE_HOST: db
+
+  db:
+    image: mysql:5.7.19
+    env_file: ./containers/.env
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./containers/db:/docker-entrypoint-initdb.d
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:
