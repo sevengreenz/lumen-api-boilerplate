@@ -22,7 +22,7 @@ abstract class AbstractRequest
 
     public function validate()
     {
-        $validator = \Validator::make($request->all(), $this->validationRule);
+        $validator = \Validator::make($this->getParams(), $this->validationRule);
 
         if ($validator->fails()) {
             throw new ValidationException($validator);
@@ -44,6 +44,6 @@ abstract class AbstractRequest
         return array_reduce($this->routeParams, function ($curry, $paramKey) {
             $curry[$paramKey] = $this->request->route($paramKey);
             return $curry;
-        });
+        }, []);
     }
 }

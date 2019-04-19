@@ -1,6 +1,6 @@
 {
-  "name": "laravel/lumen",
-  "description": "The Laravel Lumen Framework.",
+  "name": "sevengreenz/lumen-api-boilerplate",
+  "description": "The Lumen API boilerplate ",
   "keywords": [
     "framework",
     "laravel",
