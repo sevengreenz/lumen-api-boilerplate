@@ -2,8 +2,6 @@
 
 namespace App\UseCases\Contracts;
 
-use App\UseCases\Contracts\OutputPortInterface;
-
 interface InputPortInterface
 {
     /**

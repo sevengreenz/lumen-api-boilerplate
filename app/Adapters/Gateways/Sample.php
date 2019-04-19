@@ -3,9 +3,9 @@
 namespace App\Adapters\Gateways;
 
 use App\Adapters\Gateways\DataSources\Databases\SampleDatabase;
-use App\Domain\Sample;
-use App\Domain\Repositories\SampleRepository as SampleRepositoryInterface;
 use App\Domain\Factories\SampleFactory;
+use App\Domain\Repositories\SampleRepository as SampleRepositoryInterface;
+use App\Domain\Sample;
 
 class SampleRepository implements SampleRepositoryInterface
 {

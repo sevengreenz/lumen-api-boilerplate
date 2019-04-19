@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 abstract class AbstractRequest
 {
+    /** @var array route params */
+    protected $routeParams = [];
+
     /** @var array validation rule */
     protected $validationRule = [];
 
@@ -13,13 +16,17 @@ abstract class AbstractRequest
 
     public function __construct(Request $request)
     {
+        $this->request = $request;
+        $this->validate();
+    }
+
+    public function validate()
+    {
         $validator = \Validator::make($request->all(), $this->validationRule);
 
         if ($validator->fails()) {
             throw new ValidationException($validator);
         }
-
-        $this->request = $request;
     }
 
     /**
@@ -29,6 +36,14 @@ abstract class AbstractRequest
      */
     public function getParams()
     {
-        return $this->request->all();
+        return $this->routeParams() + $this->request->all();
+    }
+
+    protected function routeParams()
+    {
+        return array_reduce($this->routeParams, function ($curry, $paramKey) {
+            $curry[$paramKey] = $this->request->route($paramKey);
+            return $curry;
+        });
     }
 }

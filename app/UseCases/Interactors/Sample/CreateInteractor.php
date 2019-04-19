@@ -2,8 +2,8 @@
 
 namespace App\UseCases\Interactors\Sample;
 
-use App\Domain\Repositories\SampleRepository;
 use App\Domain\Factories\SampleFactory;
+use App\Domain\Repositories\SampleRepository;
 use App\UseCases\Contracts\InputPortInterface;
 use App\UseCases\Interactors\InputPort;
 

@@ -15,21 +15,21 @@ class ListTestSeeder extends Seeder
         \DB::table('samples')
             ->insert([
                 [
-                    'id' => 'abc',
-                    'title' => 'first',
-                    'is_done' => false,
+                    'id'         => 'abc',
+                    'title'      => 'first',
+                    'is_done'    => false,
                     'created_at' => '2017-07-10',
                 ],
                 [
-                    'id' => 'def',
-                    'title' => 'second',
-                    'is_done' => false,
+                    'id'         => 'def',
+                    'title'      => 'second',
+                    'is_done'    => false,
                     'created_at' => '2017-07-12',
                 ],
                 [
-                    'id' => 'ghi',
-                    'title' => 'third',
-                    'is_done' => true,
+                    'id'         => 'ghi',
+                    'title'      => 'third',
+                    'is_done'    => true,
                     'created_at' => '2017-07-11',
                 ]
             ]);

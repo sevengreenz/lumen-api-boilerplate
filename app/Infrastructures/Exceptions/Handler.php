@@ -2,13 +2,13 @@
 
 namespace App\Infrastructures\Exceptions;
 
+use App\Adapters\Gateways\GatewayException;
+use App\Adapters\Http\Requests\ValidationException;
 use Exception;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use App\Adapters\Http\Requests\ValidationException;
-use App\Adapters\Gateways\GatewayException;
 
 class Handler extends ExceptionHandler
 {

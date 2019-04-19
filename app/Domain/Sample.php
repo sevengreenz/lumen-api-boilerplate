@@ -24,9 +24,9 @@ class Sample implements EntityInterface
         bool $isDone,
         \Datetime $createdAt
     ) {
-        $this->id = $id;
-        $this->title = $title;
-        $this->isDone = $isDone;
+        $this->id        = $id;
+        $this->title     = $title;
+        $this->isDone    = $isDone;
         $this->createdAt = $createdAt;
     }
 

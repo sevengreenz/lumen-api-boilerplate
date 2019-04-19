@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Artisan;
 
 class QueryTest extends \TestCase
 {
-    static $table = 'query_test';
+    public static $table = 'query_test';
 
     protected $test;
 
@@ -18,7 +18,7 @@ class QueryTest extends \TestCase
         Artisan::call('db:seed', ['--class' => 'Tests\Unit\Adapters\Gateways\DataSources\Databases\QueryTestSeeder']);
 
         // test trait
-        $this->test = new class{
+        $this->test = new class {
             use Query;
 
             public function table(): string

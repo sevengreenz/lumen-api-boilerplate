@@ -2,8 +2,8 @@
 
 namespace App\Adapters\Gateways\DataSources\Databases;
 
-use Illuminate\Support\Facades\DB;
 use App\Domain\Sample;
+use Illuminate\Support\Facades\DB;
 
 class SampleDatabase
 {
@@ -31,9 +31,9 @@ class SampleDatabase
     public function create(Sample $sample)
     {
         $value = [
-            'id' => $sample->getIdentifier(),
-            'title' => $sample->title,
-            'is_done' => $sample->isDone,
+            'id'         => $sample->getIdentifier(),
+            'title'      => $sample->title,
+            'is_done'    => $sample->isDone,
             'created_at' => $sample->createdAt->format('Y-m-d H:i:s')
         ];
 

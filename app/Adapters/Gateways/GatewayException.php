@@ -2,7 +2,6 @@
 
 namespace App\Adapters\Gateways;
 
-use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 

@@ -2,9 +2,9 @@
 
 namespace Tests\Unit\Adapters\Gateways\DataSources\Databases;
 
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 
 class QueryTestSeeder extends Seeder
 {

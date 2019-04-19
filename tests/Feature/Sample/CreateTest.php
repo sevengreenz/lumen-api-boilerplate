@@ -30,7 +30,7 @@ class CreateTest extends \TestCase
         $this->seeInDatabase('samples', [
             'id'        => $content['id'],
             'title'     => 'title',
-            'is_done' => false,
+            'is_done'   => false,
         ]);
     }
 }

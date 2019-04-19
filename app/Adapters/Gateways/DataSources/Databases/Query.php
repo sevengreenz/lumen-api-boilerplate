@@ -2,9 +2,9 @@
 
 namespace App\Adapters\Gateways\DataSources\Databases;
 
-use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Query\Builder;
 use App\Adapters\Gateways\NotFoundException;
+use Illuminate\Database\Query\Builder;
+use Illuminate\Support\Facades\DB;
 
 trait Query
 {

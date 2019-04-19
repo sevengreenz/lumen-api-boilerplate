@@ -10,7 +10,7 @@ trait ParamQueryMapper
     public function param2Query(array $params): array
     {
         $options = [];
-        $order = explode(',', $params['_order'] ?? '');
+        $order   = explode(',', $params['_order'] ?? '');
 
         // create sort option from _sort and _order
         if (isset($params['_sort'])) {
