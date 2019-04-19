@@ -1,0 +1,27 @@
+<?php
+$finder = PhpCsFixer\Finder::create()
+    ->exclude('bootstrap/cache')
+    ->exclude('storage')
+    ->exclude('vendor')
+    ->in(__DIR__);
+$config = PhpCsFixer\Config::create();
+$rules  = [
+    '@PSR1' => false,
+    '@PSR2' => true,
+    'array_indentation' => true,
+    'array_syntax' => ['syntax' => 'short'],
+    'no_multiline_whitespace_around_double_arrow' => true,
+    'no_multiline_whitespace_before_semicolons' => true,
+    'blank_line_after_namespace' => true,
+    'no_unused_imports' => true,
+    'ordered_imports' => true,
+    'single_quote' => true,
+    'binary_operator_spaces' => [
+        'align_double_arrow' => true,
+        'align_equals' => true,
+    ],
+];
+$config->setRules($rules)
+    ->setUsingCache(false)
+    ->setFinder($finder);
+return $config;

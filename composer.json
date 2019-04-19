@@ -19,7 +19,8 @@
     "fzaninotto/faker": "~1.4",
     "phpunit/phpunit": "~7.0",
     "mockery/mockery": "~1.0",
-    "ramsey/uuid": "^3.8"
+    "ramsey/uuid": "^3.8",
+    "friendsofphp/php-cs-fixer": "^2.14"
   },
   "autoload": {
     "psr-4": {
@@ -37,7 +38,8 @@
       "php -r \"copy('.env.example', '.env');\""
     ],
     "test": "phpunit",
-    "test:bail": "composer test -- --stop-on-failure --stop-on-error"
+    "test:bail": "composer test -- --stop-on-failure --stop-on-error",
+    "fmt": "php-cs-fixer fix --diff -v --config .php_cs.dist"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
